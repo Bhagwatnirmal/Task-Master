@@ -1,0 +1,22 @@
+<p>dashboard works!</p>
+
+<button (click)="logout()" > Logout </button>
+<table border="1">
+
+    <tr>
+        <td>Sn</td>
+        <td>Details</td>
+        <td>Action</td> 
+    </tr>
+    <tr *ngFor="let task of tasks">
+        <td>{{task.id}}</td>
+        <td>{{task.details}}</td>
+        <td>
+            <button (click)="delete(task)"> Delete </button>
+        </td>
+    </tr>
+</table>
+<br> <br>
+
+Details: <input type="text" [(ngModel)]="details"> <br>
+<button (click) = "add()" > Add </button>
